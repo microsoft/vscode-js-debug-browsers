@@ -14,7 +14,7 @@ export class DarwinChromeBrowserFinder extends DarwinFinderBase implements IBrow
     const suffixes = ['/Contents/MacOS/Google Chrome Canary', '/Contents/MacOS/Google Chrome'];
     const defaultPaths = ['/Applications/Google Chrome.app'];
     const installations = await this.findLaunchRegisteredApps(
-      'google chrome\\( canary\\)\\?.app$',
+      'google chrome\\( canary\\)\\?.app',
       defaultPaths,
       suffixes,
     );

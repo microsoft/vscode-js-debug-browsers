@@ -1,0 +1,48 @@
+	path:          /Users/copeet/Applications (Parallels)/{336a7cbe-e323-4f88-83b8-b5d2b2f2b59c} Applications.localized/Microsoft Edge.app
+	name:          Microsoft Edge
+    CFBundleName = "Microsoft Edge";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.11/Helpers/Microsoft Edge Helper (GPU).app
+	displayName:   Microsoft Edge Helper (GPU)
+	executable:    Contents/MacOS/Microsoft Edge Helper (GPU)
+    CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+    CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+	path:          /Applications/Microsoft Edge Dev.app
+	displayName:   Microsoft Edge
+	executable:    Contents/MacOS/Microsoft Edge Dev
+    CFBundleDisplayName = "Microsoft Edge";
+    CFBundleExecutable = "Microsoft Edge Dev";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/82.0.432.3/Helpers/Microsoft Edge Helper (GPU).app
+	displayName:   Microsoft Edge Helper (GPU)
+	executable:    Contents/MacOS/Microsoft Edge Helper (GPU)
+    CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+    CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+	path:          /Applications/Microsoft Edge Beta.app
+	displayName:   Microsoft Edge
+	executable:    Contents/MacOS/Microsoft Edge Beta
+    CFBundleDisplayName = "Microsoft Edge";
+    CFBundleExecutable = "Microsoft Edge Beta";
+	path:          /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/80.0.361.50/Helpers/Microsoft Edge Helper (GPU).app
+	displayName:   Microsoft Edge Helper (GPU)
+	executable:    Contents/MacOS/Microsoft Edge Helper (GPU)
+    CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+    CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.410.1/Helpers/Microsoft Edge Helper (GPU).app
+	displayName:   Microsoft Edge Helper (GPU)
+	executable:    Contents/MacOS/Microsoft Edge Helper (GPU)
+    CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+    CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.410.1/Helpers/Microsoft Edge Helper (Renderer).app
+	displayName:   Microsoft Edge Helper (Renderer)
+	executable:    Contents/MacOS/Microsoft Edge Helper (Renderer)
+    CFBundleDisplayName = "Microsoft Edge Helper (Renderer)";
+    CFBundleExecutable = "Microsoft Edge Helper (Renderer)";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.410.1/Helpers/Microsoft Edge Helper.app
+	displayName:   Microsoft Edge Helper
+	executable:    Contents/MacOS/Microsoft Edge Helper
+    CFBundleDisplayName = "Microsoft Edge Helper";
+    CFBundleExecutable = "Microsoft Edge Helper";
+	path:          /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.410.1/Helpers/Microsoft Edge Helper (Plugin).app
+	displayName:   Microsoft Edge Helper (Plugin)
+	executable:    Contents/MacOS/Microsoft Edge Helper (Plugin)
+    CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+    CFBundleExecutable = "Microsoft Edge Helper (Plugin)";

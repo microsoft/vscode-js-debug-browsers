@@ -1,0 +1,238 @@
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.34/Helpers/Microsoft Edge Helper (Plugin).app (0x2d64)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/80.0.361.48/Helpers/Microsoft Edge Helper (GPU).app (0x1bd8)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/79.0.309.56/Helpers/Microsoft Edge Helper (GPU).app (0x151c)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/79.0.309.56/Helpers/Microsoft Edge Helper (Renderer).app (0x1524)
+displayName:        Microsoft Edge Helper (Renderer)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Renderer)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Renderer)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Renderer)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Renderer)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/79.0.309.56/Helpers/Microsoft Edge Helper.app (0x152c)
+displayName:        Microsoft Edge Helper
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper"
+executable:         Contents/MacOS/Microsoft Edge Helper
+                        CFBundleDisplayName = "Microsoft Edge Helper";
+                        CFBundleExecutable = "Microsoft Edge Helper";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/79.0.309.56/Helpers/Microsoft Edge Helper (Plugin).app (0x153c)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.20/Helpers/Microsoft Edge Helper (GPU).app (0x1d50)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.45/Helpers/Microsoft Edge Helper (GPU).app (0x2f1c)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.45/Helpers/Microsoft Edge Helper (Plugin).app (0x2fa0)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.53/Helpers/Microsoft Edge Helper (GPU).app (0x30dc)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/84.0.488.1/Helpers/Microsoft Edge Helper (GPU).app (0x3158)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/84.0.488.1/Helpers/Microsoft Edge Helper (Renderer).app (0x3160)
+displayName:        Microsoft Edge Helper (Renderer)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Renderer)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Renderer)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Renderer)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Renderer)";
+path:               /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/84.0.488.1/Helpers/Microsoft Edge Helper.app (0x3168)
+displayName:        Microsoft Edge Helper
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper"
+executable:         Contents/MacOS/Microsoft Edge Helper
+                        CFBundleDisplayName = "Microsoft Edge Helper";
+                        CFBundleExecutable = "Microsoft Edge Helper";
+path:               /Applications/Microsoft Edge Dev.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/84.0.488.1/Helpers/Microsoft Edge Helper (Plugin).app (0x3174)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+bundle id:          Microsoft Edge (0x2618)
+path:               /Applications/Microsoft Edge Dev.app (0x317c)
+displayName:        Microsoft Edge
+localizedName:      "af" = "Microsoft Edge", "am" = "Microsoft Edge", "ar" = "‏Microsoft Edge", "as" = "Microsoft Edge", "az" = "Microsoft Edge", "be" = "Microsoft Edge", "bg" = "Microsoft Edge", "bs" = "Microsoft Edge", "ca" = "Microsoft Edge", "chr" = "Microsoft Edge", "cs" = "Microsoft Edge", "cy" = "Microsoft Edg", "da" = "Microsoft Edge", "de" = "Microsoft Edge", "el" = "Microsoft Edge", "en" = "Microsoft Edge", "en_GB" = "Microsoft Edge", "es" = "Microsoft Edge", "es_419" = "Microsoft Edge", "et" = "Microsoft Edge", "eu" = "Microsoft Edge", "fa" = "Microsoft Edge", "fi" = "Microsoft Edge", "fil" = "Microsoft Edge", "fr" = "Microsoft Edge", "fr_CA" = "Microsoft Edge", "ga" = "Microsoft Edge", "gd" = "Microsoft Edge", "gl" = "Microsoft Edge", "gu" = "Microsoft Edge", "he" = "Microsoft Edge", "hi" = "Microsoft Edge", "hr" = "Microsoft Edge", "hu" = "Microsoft Edge", "hy" = "Microsoft Edge", "id" = "Microsoft Edge", "is" = "Microsoft Edge", "it" = "Microsoft Edge", "ja" = "Microsoft Edge", "ka" = "Microsoft Edge", "kk" = "Microsoft Edge", "km" = "Microsoft Edge", "kn" = "Microsoft Edge", "ko" = "Microsoft Edge", "kok" = "Microsoft Edge", "ky" = "Microsoft Edge", "lb" = "Microsoft Edge", "lo" = "Microsoft Edge", "LSDefaultLocalizedValue" = "Microsoft Edge", "lt" = "Microsoft Edge", "lv" = "Microsoft Edge", "mi" = "Microsoft Edge", "mk" = "Microsoft Edge", "ml" = "Microsoft Edge", "mn" = "Microsoft Edge", "mr" = "Microsoft Edge", "ms" = "Microsoft Edge", "mt" = "Microsoft Edge", "nb" = "Microsoft Edge", "ne" = "Microsoft Edge", "nl" = "Microsoft Edge", "nn" = "Microsoft Edge", "or" = "Microsoft Edge", "pa" = "Microsoft Edge", "pl" = "Microsoft Edge", "pt_BR" = "Microsoft Edge", "pt_PT" = "Microsoft Edge", "qu" = "Microsoft Edge", "ro" = "Microsoft Edge", "ru" = "Microsoft Edge", "sd" = "Microsoft Edge", "si" = "Microsoft Edge", "sk" = "Microsoft Edge", "sl" = "Microsoft Edge", "sq" = Microsoft Edge", "sr" = "Microsoft Edge", "sr_Latn_RS" = "Microsoft Edge", "sv" = "Microsoft Edge", "sw" = "Microsoft Edge", "ta" = "Microsoft Edge", "te" = "Microsoft Edge", "th" = "Microsoft Edge", "tk" = "Microsoft Edge", "tr" = "Microsoft Edge", "tt" = "Microsoft Edge", "ug" = "Microsoft Edge", "uk" = "Microsoft Edge", "ur" = "Microsoft Edge", "uz_Latn" = "Microsoft Edge", "vi" = "Microsoft Edge", "zh_CN" = "Microsoft Edge", "zh_TW" = "Microsoft Edge"
+localizedShortName: "af" = "Microsoft Edge", "am" = "Microsoft Edge", "ar" = "‏Microsoft Edge", "as" = "Microsoft Edge", "az" = "Microsoft Edge", "be" = "Microsoft Edge", "bg" = "Microsoft Edge", "bs" = "Microsoft Edge", "ca" = "Microsoft Edge", "chr" = "Microsoft Edge", "cs" = "Microsoft Edge", "cy" = "Microsoft Edg", "da" = "Microsoft Edge", "de" = "Microsoft Edge", "el" = "Microsoft Edge", "en" = "Microsoft Edge", "en_GB" = "Microsoft Edge", "es" = "Microsoft Edge", "es_419" = "Microsoft Edge", "et" = "Microsoft Edge", "eu" = "Microsoft Edge", "fa" = "Microsoft Edge", "fi" = "Microsoft Edge", "fil" = "Microsoft Edge", "fr" = "Microsoft Edge", "fr_CA" = "Microsoft Edge", "ga" = "Microsoft Edge", "gd" = "Microsoft Edge", "gl" = "Microsoft Edge", "gu" = "Microsoft Edge", "he" = "Microsoft Edge", "hi" = "Microsoft Edge", "hr" = "Microsoft Edge", "hu" = "Microsoft Edge", "hy" = "Microsoft Edge", "id" = "Microsoft Edge", "is" = "Microsoft Edge", "it" = "Microsoft Edge", "ja" = "Microsoft Edge", "ka" = "Microsoft Edge", "kk" = "Microsoft Edge", "km" = "Microsoft Edge", "kn" = "Microsoft Edge", "ko" = "Microsoft Edge", "kok" = "Microsoft Edge", "ky" = "Microsoft Edge", "lb" = "Microsoft Edge", "lo" = "Microsoft Edge", "LSDefaultLocalizedValue" = "Edge", "lt" = "Microsoft Edge", "lv" = "Microsoft Edge", "mi" = "Microsoft Edge", "mk" = "Microsoft Edge", "ml" = "Microsoft Edge", "mn" = "Microsoft Edge", "mr" = "Microsoft Edge", "ms" = "Microsoft Edge", "mt" = "Microsoft Edge", "nb" = "Microsoft Edge", "ne" = "Microsoft Edge", "nl" = "Microsoft Edge", "nn" = "Microsoft Edge", "or" = "Microsoft Edge", "pa" = "Microsoft Edge", "pl" = "Microsoft Edge", "pt_BR" = "Microsoft Edge", "pt_PT" = "Microsoft Edge", "qu" = "Microsoft Edge", "ro" = Microsoft Edge", "ru" = "Microsoft Edge", "sd" = "Microsoft Edge", "si" = "Microsoft Edge", "sk" = "Microsoft Edge", "sl" = "Microsoft Edge", "sq" = "Microsoft Edge", "sr" = "Microsoft Edge", "sr_Latn_RS" = "Microsoft Edge", "sv" = "Microsoft Edge", "sw" = "Microsoft Edge", "ta" = "Microsoft Edge", "te" = "Microsoft Edge", "th" = "Microsoft Edge", "tk" = "Microsoft Edge", "tr" = "Microsoft Edge", "tt" = "Microsoft Edge", "ug" = "Microsoft Edge", "uk" = "Microsoft Edge", "ur" = "Microsoft Edge", "uz_Latn" = "Microsoft Edge", "vi" = "Microsoft Edge", "zh_CN" = "Microsoft Edge", "zh_TW" = "Microsoft Edge"
+executable:         Contents/MacOS/Microsoft Edge Dev
+                        CFBundleDisplayName = "Microsoft Edge";
+                        CFBundleExecutable = "Microsoft Edge Dev";
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle id:          Microsoft Edge (0x2634)
+path:               /Applications/Microsoft Edge Beta.app (0x3198)
+displayName:        Microsoft Edge
+localizedName:      "af" = "Microsoft Edge", "am" = "Microsoft Edge", "ar" = "‏Microsoft Edge", "as" = "Microsoft Edge", "az" = "Microsoft Edge", "be" = "Microsoft Edge", "bg" = "Microsoft Edge", "bs" = "Microsoft Edge", "ca" = "Microsoft Edge", "chr" = "Microsoft Edge", "cs" = "Microsoft Edge", "cy" = "Microsoft Edg", "da" = "Microsoft Edge", "de" = "Microsoft Edge", "el" = "Microsoft Edge", "en" = "Microsoft Edge", "en_GB" = "Microsoft Edge", "es" = "Microsoft Edge", "es_419" = "Microsoft Edge", "et" = "Microsoft Edge", "eu" = "Microsoft Edge", "fa" = "Microsoft Edge", "fi" = "Microsoft Edge", "fil" = "Microsoft Edge", "fr" = "Microsoft Edge", "fr_CA" = "Microsoft Edge", "ga" = "Microsoft Edge", "gd" = "Microsoft Edge", "gl" = "Microsoft Edge", "gu" = "Microsoft Edge", "he" = "Microsoft Edge", "hi" = "Microsoft Edge", "hr" = "Microsoft Edge", "hu" = "Microsoft Edge", "hy" = "Microsoft Edge", "id" = "Microsoft Edge", "is" = "Microsoft Edge", "it" = "Microsoft Edge", "ja" = "Microsoft Edge", "ka" = "Microsoft Edge", "kk" = "Microsoft Edge", "km" = "Microsoft Edge", "kn" = "Microsoft Edge", "ko" = "Microsoft Edge", "kok" = "Microsoft Edge", "ky" = "Microsoft Edge", "lb" = "Microsoft Edge", "lo" = "Microsoft Edge", "LSDefaultLocalizedValue" = "Microsoft Edge", "lt" = "Microsoft Edge", "lv" = "Microsoft Edge", "mi" = "Microsoft Edge", "mk" = "Microsoft Edge", "ml" = "Microsoft Edge", "mn" = "Microsoft Edge", "mr" = "Microsoft Edge", "ms" = "Microsoft Edge", "mt" = "Microsoft Edge", "nb" = "Microsoft Edge", "ne" = "Microsoft Edge", "nl" = "Microsoft Edge", "nn" = "Microsoft Edge", "or" = "Microsoft Edge", "pa" = "Microsoft Edge", "pl" = "Microsoft Edge", "pt_BR" = "Microsoft Edge", "pt_PT" = "Microsoft Edge", "qu" = "Microsoft Edge", "ro" = "Microsoft Edge", "ru" = "Microsoft Edge", "sd" = "Microsoft Edge", "si" = "Microsoft Edge", "sk" = "Microsoft Edge", "sl" = "Microsoft Edge", "sq" = Microsoft Edge", "sr" = "Microsoft Edge", "sr_Latn_RS" = "Microsoft Edge", "sv" = "Microsoft Edge", "sw" = "Microsoft Edge", "ta" = "Microsoft Edge", "te" = "Microsoft Edge", "th" = "Microsoft Edge", "tk" = "Microsoft Edge", "tr" = "Microsoft Edge", "tt" = "Microsoft Edge", "ug" = "Microsoft Edge", "uk" = "Microsoft Edge", "ur" = "Microsoft Edge", "uz_Latn" = "Microsoft Edge", "vi" = "Microsoft Edge", "zh_CN" = "Microsoft Edge", "zh_TW" = "Microsoft Edge"
+localizedShortName: "af" = "Microsoft Edge", "am" = "Microsoft Edge", "ar" = "‏Microsoft Edge", "as" = "Microsoft Edge", "az" = "Microsoft Edge", "be" = "Microsoft Edge", "bg" = "Microsoft Edge", "bs" = "Microsoft Edge", "ca" = "Microsoft Edge", "chr" = "Microsoft Edge", "cs" = "Microsoft Edge", "cy" = "Microsoft Edg", "da" = "Microsoft Edge", "de" = "Microsoft Edge", "el" = "Microsoft Edge", "en" = "Microsoft Edge", "en_GB" = "Microsoft Edge", "es" = "Microsoft Edge", "es_419" = "Microsoft Edge", "et" = "Microsoft Edge", "eu" = "Microsoft Edge", "fa" = "Microsoft Edge", "fi" = "Microsoft Edge", "fil" = "Microsoft Edge", "fr" = "Microsoft Edge", "fr_CA" = "Microsoft Edge", "ga" = "Microsoft Edge", "gd" = "Microsoft Edge", "gl" = "Microsoft Edge", "gu" = "Microsoft Edge", "he" = "Microsoft Edge", "hi" = "Microsoft Edge", "hr" = "Microsoft Edge", "hu" = "Microsoft Edge", "hy" = "Microsoft Edge", "id" = "Microsoft Edge", "is" = "Microsoft Edge", "it" = "Microsoft Edge", "ja" = "Microsoft Edge", "ka" = "Microsoft Edge", "kk" = "Microsoft Edge", "km" = "Microsoft Edge", "kn" = "Microsoft Edge", "ko" = "Microsoft Edge", "kok" = "Microsoft Edge", "ky" = "Microsoft Edge", "lb" = "Microsoft Edge", "lo" = "Microsoft Edge", "LSDefaultLocalizedValue" = "Edge", "lt" = "Microsoft Edge", "lv" = "Microsoft Edge", "mi" = "Microsoft Edge", "mk" = "Microsoft Edge", "ml" = "Microsoft Edge", "mn" = "Microsoft Edge", "mr" = "Microsoft Edge", "ms" = "Microsoft Edge", "mt" = "Microsoft Edge", "nb" = "Microsoft Edge", "ne" = "Microsoft Edge", "nl" = "Microsoft Edge", "nn" = "Microsoft Edge", "or" = "Microsoft Edge", "pa" = "Microsoft Edge", "pl" = "Microsoft Edge", "pt_BR" = "Microsoft Edge", "pt_PT" = "Microsoft Edge", "qu" = "Microsoft Edge", "ro" = Microsoft Edge", "ru" = "Microsoft Edge", "sd" = "Microsoft Edge", "si" = "Microsoft Edge", "sk" = "Microsoft Edge", "sl" = "Microsoft Edge", "sq" = "Microsoft Edge", "sr" = "Microsoft Edge", "sr_Latn_RS" = "Microsoft Edge", "sv" = "Microsoft Edge", "sw" = "Microsoft Edge", "ta" = "Microsoft Edge", "te" = "Microsoft Edge", "th" = "Microsoft Edge", "tk" = "Microsoft Edge", "tr" = "Microsoft Edge", "tt" = "Microsoft Edge", "ug" = "Microsoft Edge", "uk" = "Microsoft Edge", "ur" = "Microsoft Edge", "uz_Latn" = "Microsoft Edge", "vi" = "Microsoft Edge", "zh_CN" = "Microsoft Edge", "zh_TW" = "Microsoft Edge"
+executable:         Contents/MacOS/Microsoft Edge Beta
+                        CFBundleDisplayName = "Microsoft Edge";
+                        CFBundleExecutable = "Microsoft Edge Beta";
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/83.0.478.13/Helpers/Microsoft Edge Helper (GPU).app (0x31a0)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/83.0.478.13/Helpers/Microsoft Edge Helper (Plugin).app (0x31b4)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.20/Helpers/Microsoft Edge Helper (Plugin).app (0x2b68)
+displayName:        Microsoft Edge Helper (Plugin)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (Plugin)"
+executable:         Contents/MacOS/Microsoft Edge Helper (Plugin)
+                        CFBundleDisplayName = "Microsoft Edge Helper (Plugin)";
+                        CFBundleExecutable = "Microsoft Edge Helper (Plugin)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.31/Helpers/Microsoft Edge Helper (GPU).app (0x2b84)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/80.0.361.33/Helpers/Microsoft Edge Helper (GPU).app (0x1a8c)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/80.0.361.40/Helpers/Microsoft Edge Helper (GPU).app (0x1b6c)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+path:               /Applications/Microsoft Edge Beta.app/Contents/Frameworks/Microsoft Edge Framework.framework/Versions/81.0.416.34/Helpers/Microsoft Edge Helper (GPU).app (0x2d24)
+displayName:        Microsoft Edge Helper (GPU)
+localizedName:      "LSDefaultLocalizedValue" = "Microsoft Edge Helper (GPU)"
+executable:         Contents/MacOS/Microsoft Edge Helper (GPU)
+                        CFBundleDisplayName = "Microsoft Edge Helper (GPU)";
+                        CFBundleExecutable = "Microsoft Edge Helper (GPU)";
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2618)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)
+bundle:             Microsoft Edge (0x2634)

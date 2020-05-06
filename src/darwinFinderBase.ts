@@ -8,10 +8,17 @@ import _execa from 'execa';
 import { promises as fsPromises } from 'fs';
 import { escapeRegexSpecialChars, IPriority } from './util';
 
+const pathSuffixRe = /( \(0x[a-f0-9]+\))/;
+
 /**
  * Base class providing utilities for the Darwin browser finders.
  */
 export abstract class DarwinFinderBase {
+  protected lsRegisterCommand =
+    '/System/Library/Frameworks/CoreServices.framework' +
+    '/Versions/A/Frameworks/LaunchServices.framework' +
+    '/Versions/A/Support/lsregister -dump';
+
   constructor(
     protected readonly env: NodeJS.ProcessEnv,
     private readonly fs: typeof fsPromises,
@@ -31,19 +38,18 @@ export abstract class DarwinFinderBase {
     defaultPaths: ReadonlyArray<string>,
     suffixes: ReadonlyArray<string>,
   ) {
-    const lsRegister =
-      '/System/Library/Frameworks/CoreServices.framework' +
-      '/Versions/A/Frameworks/LaunchServices.framework' +
-      '/Versions/A/Support/lsregister';
-
     const {
       stdout,
     } = await this.execa.command(
-      `${lsRegister} -dump | grep -i '${pattern}'| awk '{$1=""; print $0}'`,
+      `${this.lsRegisterCommand} | awk '$0 ~ /${pattern}${pathSuffixRe.source}?$/ { $1=""; print $0 }'`,
       { shell: true, stdio: 'pipe' },
     );
 
-    const paths = [...defaultPaths, ...stdout.split('\n').map(l => l.trim())].filter(l => !!l);
+    const paths = [
+      ...defaultPaths,
+      ...stdout.split('\n').map(l => l.trim().replace(pathSuffixRe, '')),
+    ].filter(l => !!l);
+
     const preferred = this.getPreferredPath();
     if (preferred) {
       paths.push(preferred);
