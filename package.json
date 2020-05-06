@@ -49,7 +49,7 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "sinon": "^8.1.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.9.1-rc"
   },
   "dependencies": {
     "execa": "^4.0.0"
