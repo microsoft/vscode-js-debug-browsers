@@ -12,7 +12,10 @@ import { DarwinFinderBase } from './darwinFinderBase';
 export class DarwinChromeBrowserFinder extends DarwinFinderBase implements IBrowserFinder {
   public async findAll() {
     const suffixes = ['/Contents/MacOS/Google Chrome Canary', '/Contents/MacOS/Google Chrome'];
-    const defaultPaths = ['/Applications/Google Chrome.app'];
+    const defaultPaths = [
+      '/Applications/Google Chrome.app',
+      '/Applications/Google Chrome Canary.app',
+    ];
     const installations = await this.findLaunchRegisteredApps(
       'google chrome\\( canary\\)\\?.app',
       defaultPaths,
