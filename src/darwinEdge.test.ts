@@ -23,7 +23,7 @@ describe('darwin: edge', () => {
     ' /Applications/Microsoft Edge Beta.app',
   ];
 
-  const test = (options: { lsreturn: string[]; pathsThatExist: string[] }) => {
+  const setup = (options: { lsreturn: string[]; pathsThatExist: string[] }) => {
     const execa = {
       command: stub().resolves({ stdout: options.lsreturn.join('\n') }),
     };
@@ -42,21 +42,21 @@ describe('darwin: edge', () => {
       execa as any,
     );
 
-    return finder.findAll();
+    return finder;
   };
 
   it('does not return when paths dont exist', async () => {
     expect(
-      await test({
+      await setup({
         lsreturn,
         pathsThatExist: [],
-      }),
+      }).findAll(),
     ).to.be.empty;
   });
 
   it('returns and orders correctly', async () => {
     expect(
-      await test({
+      await setup({
         lsreturn,
         pathsThatExist: [
           '/custom/path/Contents/MacOS/Microsoft Edge Dev',
@@ -64,7 +64,7 @@ describe('darwin: edge', () => {
           '/Applications/Microsoft Edge Dev.app/Contents/MacOS/Microsoft Edge Dev',
           '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
         ],
-      }),
+      }).findAll(),
     ).to.deep.equal([
       {
         path: '/custom/path/Contents/MacOS/Microsoft Edge Dev',
@@ -83,5 +83,36 @@ describe('darwin: edge', () => {
         quality: Quality.Stable,
       },
     ]);
+  });
+
+  it('finds well-known paths', async () => {
+    const s = setup({
+      lsreturn,
+      pathsThatExist: [
+        '/custom/path/Contents/MacOS/Microsoft Edge Dev',
+        '/Applications/Microsoft Edge Beta.app/Contents/MacOS/Microsoft Edge Beta',
+        '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+      ],
+    });
+
+    let calls = 0;
+    expect(
+      await s.findWhere(exe => {
+        calls++;
+        return exe.quality === Quality.Stable;
+      }),
+    ).to.deep.equal({
+      path: '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+      quality: Quality.Stable,
+    });
+
+    expect(calls).to.equal(1);
+
+    expect(
+      await s.findWhere(exe => {
+        calls++;
+        return exe.quality === Quality.Canary;
+      }),
+    ).to.be.undefined;
   });
 });

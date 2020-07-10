@@ -3,13 +3,38 @@
  *--------------------------------------------------------*/
 
 import { sort } from './util';
-import { Quality, IBrowserFinder } from './index';
+import { Quality } from './index';
 import { DarwinFinderBase } from './darwinFinderBase';
 
 /**
  * Finds the Edege browser on OS X.
  */
-export class DarwinEdgeBrowserFinder extends DarwinFinderBase implements IBrowserFinder {
+export class DarwinEdgeBrowserFinder extends DarwinFinderBase {
+  /**
+   * @override
+   */
+  protected wellKnownPaths = [
+    {
+      path: '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+      quality: Quality.Stable,
+    },
+    {
+      path: '/Applications/Microsoft Edge Canary.app/Contents/MacOS/Microsoft Edge Canary',
+      quality: Quality.Canary,
+    },
+    {
+      path: '/Applications/Microsoft Edge Beta.app/Contents/MacOS/Microsoft Edge Beta',
+      quality: Quality.Beta,
+    },
+    {
+      path: '/Applications/Microsoft Edge Dev.app/Contents/MacOS/Microsoft Edge Dev',
+      quality: Quality.Dev,
+    },
+  ];
+
+  /**
+   * @override
+   */
   public async findAll() {
     const suffixes = [
       '/Contents/MacOS/Microsoft Edge Canary',

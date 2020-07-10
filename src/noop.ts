@@ -9,6 +9,10 @@ import { IBrowserFinder } from './index';
  * Edge on Linux).
  */
 export class NoopFinder implements IBrowserFinder {
+  public findWhere() {
+    return Promise.resolve(undefined);
+  }
+
   public findAll() {
     return Promise.resolve([]);
   }

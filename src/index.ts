@@ -49,10 +49,16 @@ export interface IExecutable {
   quality: Quality;
 }
 
-/**
- * Finds all browser executables available on the current platform.
- */
 export interface IBrowserFinder {
+  /**
+   * Finds the first browser on the platform where the predicate matches.
+   * May return early.
+   */
+  findWhere(predicate: (exe: IExecutable) => boolean): Promise<IExecutable | undefined>;
+
+  /**
+   * Finds all browser executables available on the current platform.
+   */
   findAll(): Promise<IExecutable[]>;
 }
 

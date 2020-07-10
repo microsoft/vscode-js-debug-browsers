@@ -2,7 +2,7 @@
  * Copyright (C) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 
-import { Quality, IBrowserFinder } from './index';
+import { Quality, IBrowserFinder, IExecutable } from './index';
 import { sep } from 'path';
 import { promises as fsPromises } from 'fs';
 import { preferredEdgePath, findWindowsCandidates } from './util';
@@ -12,6 +12,10 @@ import { preferredEdgePath, findWindowsCandidates } from './util';
  */
 export class WindowsEdgeBrowserFinder implements IBrowserFinder {
   constructor(private readonly env: NodeJS.ProcessEnv, private readonly fs: typeof fsPromises) {}
+
+  public async findWhere(predicate: (exe: IExecutable) => boolean) {
+    return (await this.findAll()).find(predicate);
+  }
 
   public async findAll() {
     const suffixes = [

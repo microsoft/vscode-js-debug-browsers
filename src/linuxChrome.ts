@@ -6,7 +6,7 @@ import { posix } from 'path';
 import { preferredChromePath, sort, canAccess, escapeRegexSpecialChars } from './util';
 import { execSync, execFileSync } from 'child_process';
 import { homedir } from 'os';
-import { IBrowserFinder, Quality } from './index';
+import { IBrowserFinder, Quality, IExecutable } from './index';
 import { promises as fsPromises } from 'fs';
 
 const newLineRegex = /\r?\n/;
@@ -16,6 +16,10 @@ const newLineRegex = /\r?\n/;
  */
 export class LinuxChromeBrowserFinder implements IBrowserFinder {
   constructor(private readonly env: NodeJS.ProcessEnv, private readonly fs: typeof fsPromises) {}
+
+  public async findWhere(predicate: (exe: IExecutable) => boolean) {
+    return (await this.findAll()).find(predicate);
+  }
 
   public async findAll() {
     const installations = new Set<string>();

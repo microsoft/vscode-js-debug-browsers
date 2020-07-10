@@ -3,27 +3,52 @@
  *--------------------------------------------------------*/
 
 import { posix } from 'path';
-import { Quality } from '.';
+import { Quality, IExecutable, IBrowserFinder } from '.';
 import _execa from 'execa';
 import { promises as fsPromises } from 'fs';
-import { escapeRegexSpecialChars, IPriority } from './util';
+import { escapeRegexSpecialChars, IPriority, canAccess } from './util';
 
 const pathSuffixRe = /( \(0x[a-f0-9]+\))/;
 
 /**
  * Base class providing utilities for the Darwin browser finders.
  */
-export abstract class DarwinFinderBase {
+export abstract class DarwinFinderBase implements IBrowserFinder {
   protected lsRegisterCommand =
     '/System/Library/Frameworks/CoreServices.framework' +
     '/Versions/A/Frameworks/LaunchServices.framework' +
     '/Versions/A/Support/lsregister -dump';
+
+  /**
+   * Well-known paths to browsers on Chrome. This is used to make finding fast
+   * in the common case, avoiding sometimes-slow launch services.
+   * @see https://github.com/microsoft/vscode-js-debug/issues/570
+   */
+  protected wellKnownPaths: ReadonlyArray<IExecutable> = [];
 
   constructor(
     protected readonly env: NodeJS.ProcessEnv,
     private readonly fs: typeof fsPromises,
     private readonly execa: typeof _execa,
   ) {}
+
+  /**
+   * @inheritdoc
+   */
+  public async findWhere(predicate: (exe: IExecutable) => boolean) {
+    for (const test of this.wellKnownPaths) {
+      if (predicate(test) && (await canAccess(this.fs, test.path))) {
+        return test;
+      }
+    }
+
+    return (await this.findAll()).find(predicate);
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public abstract findAll(): Promise<IExecutable[]>;
 
   /**
    * Returns the environment-configured custom path, if any.

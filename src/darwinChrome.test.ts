@@ -15,7 +15,7 @@ describe('darwin: chrome', () => {
     ' /Applications/Google Chrome Canary.app',
   ];
 
-  const test = (options: { lsreturn: string[]; pathsThatExist: string[] }) => {
+  const setup = (options: { lsreturn: string[]; pathsThatExist: string[] }) => {
     const execa = {
       command: stub().resolves({ stdout: options.lsreturn.join('\n') }),
     };
@@ -34,21 +34,21 @@ describe('darwin: chrome', () => {
       execa as any,
     );
 
-    return finder.findAll();
+    return finder;
   };
 
   it('does not return when paths dont exist', async () => {
     expect(
-      await test({
+      await setup({
         lsreturn,
         pathsThatExist: [],
-      }),
+      }).findAll(),
     ).to.be.empty;
   });
 
   it('returns and orders correctly', async () => {
     expect(
-      await test({
+      await setup({
         lsreturn,
         pathsThatExist: [
           '/custom/path/Contents/MacOS/Google Chrome',
@@ -56,7 +56,7 @@ describe('darwin: chrome', () => {
           '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
           '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         ],
-      }),
+      }).findAll(),
     ).to.deep.equal([
       {
         path: '/custom/path/Contents/MacOS/Google Chrome',
@@ -76,5 +76,41 @@ describe('darwin: chrome', () => {
         quality: Quality.Dev,
       },
     ]);
+  });
+
+  it('finds well-known paths', async () => {
+    const s = setup({
+      lsreturn,
+      pathsThatExist: [
+        '/custom/path/Contents/MacOS/Google Chrome',
+        '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+        '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
+        '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      ],
+    });
+
+    let calls = 0;
+    expect(
+      await s.findWhere(exe => {
+        calls++;
+        return exe.quality === Quality.Stable;
+      }),
+    ).to.deep.equal({
+      path: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      quality: Quality.Stable,
+    });
+
+    expect(calls).to.equal(1);
+
+    expect(
+      await s.findWhere(exe => {
+        calls++;
+        return exe.quality === Quality.Dev;
+      }),
+    ).to.deep.equal({
+      path:
+        '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
+      quality: Quality.Dev,
+    });
   });
 });

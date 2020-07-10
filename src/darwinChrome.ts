@@ -3,13 +3,30 @@
  *--------------------------------------------------------*/
 
 import { sort } from './util';
-import { Quality, IBrowserFinder } from './index';
+import { Quality } from './index';
 import { DarwinFinderBase } from './darwinFinderBase';
 
 /**
  * Finds the Chrome browser on OS X.
  */
-export class DarwinChromeBrowserFinder extends DarwinFinderBase implements IBrowserFinder {
+export class DarwinChromeBrowserFinder extends DarwinFinderBase {
+  /**
+   * @override
+   */
+  protected wellKnownPaths = [
+    {
+      path: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      quality: Quality.Stable,
+    },
+    {
+      path: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+      quality: Quality.Canary,
+    },
+  ];
+
+  /**
+   * @override
+   */
   public async findAll() {
     const suffixes = ['/Contents/MacOS/Google Chrome Canary', '/Contents/MacOS/Google Chrome'];
     const defaultPaths = [
