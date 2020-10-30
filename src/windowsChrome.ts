@@ -21,8 +21,16 @@ export class WindowsChromeBrowserFinder implements IBrowserFinder {
     const sep = win32.sep;
     const suffixes = [
       {
+        name: `${sep}Google${sep}Chrome Dev${sep}Application${sep}chrome.exe`,
+        type: Quality.Dev,
+      },
+      {
         name: `${sep}Google${sep}Chrome SxS${sep}Application${sep}chrome.exe`,
         type: Quality.Canary,
+      },
+      {
+        name: `${sep}Google${sep}Chrome Beta${sep}Application${sep}chrome.exe`,
+        type: Quality.Beta,
       },
       {
         name: `${sep}Google${sep}Chrome${sep}Application${sep}chrome.exe`,

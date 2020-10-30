@@ -22,6 +22,14 @@ export class DarwinChromeBrowserFinder extends DarwinFinderBase {
       path: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
       quality: Quality.Canary,
     },
+    {
+      path: '/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta',
+      quality: Quality.Beta,
+    },
+    {
+      path: '/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev',
+      quality: Quality.Dev,
+    },
   ];
 
   /**
