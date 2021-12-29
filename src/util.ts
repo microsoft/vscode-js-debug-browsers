@@ -30,7 +30,7 @@ const regexChars = '/\\.?*()^${}|[]+';
 export function escapeRegexSpecialChars(str: string, except?: string): string {
   const useRegexChars = regexChars
     .split('')
-    .filter(c => !except || except.indexOf(c) < 0)
+    .filter((c) => !except || except.indexOf(c) < 0)
     .join('')
     .replace(/[\\\]]/g, '\\$&');
 
@@ -75,9 +75,9 @@ export function sort(installations: Iterable<string>, priorities: IPriority[]): 
   const defaultPriority = 10;
   return (
     [...installations]
-      .filter(inst => !!inst)
-      .map(inst => {
-        const priority = priorities.find(p => p.regex.test(inst));
+      .filter((inst) => !!inst)
+      .map((inst) => {
+        const priority = priorities.find((p) => p.regex.test(inst));
         return priority
           ? { path: inst, weight: priority.weight, quality: priority.quality }
           : { path: inst, weight: defaultPriority, quality: Quality.Dev };
@@ -85,7 +85,7 @@ export function sort(installations: Iterable<string>, priorities: IPriority[]): 
       // sort based on weight
       .sort((a, b) => b.weight - a.weight)
       // remove weight
-      .map(p => ({ path: p.path, quality: p.quality }))
+      .map((p) => ({ path: p.path, quality: p.quality }))
   );
 }
 
@@ -108,7 +108,7 @@ export async function findWindowsCandidates(
     for (const suffix of suffixes) {
       const candidate = win32.join(prefix, suffix.name);
       todo.push(
-        canAccess(fs, candidate).then(ok =>
+        canAccess(fs, candidate).then((ok) =>
           ok ? { path: candidate, quality: suffix.type } : undefined,
         ),
       );

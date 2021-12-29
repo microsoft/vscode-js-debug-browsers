@@ -63,17 +63,15 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
     defaultPaths: ReadonlyArray<string>,
     suffixes: ReadonlyArray<string>,
   ) {
-    const {
-      stdout,
-    } = await this.execa.command(
+    const { stdout } = await this.execa.command(
       `${this.lsRegisterCommand} | awk '$0 ~ /${pattern}${pathSuffixRe.source}?$/ { $1=""; print $0 }'`,
       { shell: true, stdio: 'pipe' },
     );
 
     const paths = [
       ...defaultPaths,
-      ...stdout.split('\n').map(l => l.trim().replace(pathSuffixRe, '')),
-    ].filter(l => !!l);
+      ...stdout.split('\n').map((l) => l.trim().replace(pathSuffixRe, '')),
+    ].filter((l) => !!l);
 
     const preferred = this.getPreferredPath();
     if (preferred) {

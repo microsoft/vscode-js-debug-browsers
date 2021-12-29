@@ -36,7 +36,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       '/usr/share/applications/',
       '/usr/bin',
     ];
-    desktopInstallationFolders.forEach(folder => {
+    desktopInstallationFolders.forEach((folder) => {
       for (const bin in this.findChromeExecutables(folder)) {
         installations.add(bin);
       }
@@ -52,7 +52,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
     ];
 
     await Promise.all(
-      executables.map(async executable => {
+      executables.map(async (executable) => {
         try {
           const chromePath = execFileSync('which', [executable], { stdio: 'pipe' })
             .toString()
@@ -93,12 +93,12 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
     return sort(installations, priorities);
   }
 
-  private findChromeExecutables(folder: string) {
+  private async findChromeExecutables(folder: string) {
     const argumentsRegex = /(^[^ ]+).*/; // Take everything up to the first space
     const chromeExecRegex = '^Exec=/.*/(google-chrome|chrome|chromium)-.*';
 
     const installations: string[] = [];
-    if (canAccess(this.fs, folder)) {
+    if (await canAccess(this.fs, folder)) {
       // Output of the grep & print looks like:
       //    /opt/google/chrome/google-chrome --profile-directory
       //    /home/user/Downloads/chrome-linux/chrome-wrapper %U
@@ -115,8 +115,15 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       const execPaths = execResult
         .toString()
         .split(newLineRegex)
-        .map(execPath => execPath.replace(argumentsRegex, '$1'));
-      execPaths.forEach(execPath => canAccess(this.fs, execPath) && installations.push(execPath));
+        .map((execPath) => execPath.replace(argumentsRegex, '$1'));
+
+      await Promise.all(
+        execPaths.map(async (execPath) => {
+          if (await canAccess(this.fs, execPath)) {
+            installations.push(execPath);
+          }
+        }),
+      );
     }
 
     return installations;

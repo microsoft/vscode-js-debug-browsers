@@ -97,7 +97,7 @@ describe('darwin: edge', () => {
 
     let calls = 0;
     expect(
-      await s.findWhere(exe => {
+      await s.findWhere((exe) => {
         calls++;
         return exe.quality === Quality.Stable;
       }),
@@ -109,7 +109,7 @@ describe('darwin: edge', () => {
     expect(calls).to.equal(1);
 
     expect(
-      await s.findWhere(exe => {
+      await s.findWhere((exe) => {
         calls++;
         return exe.quality === Quality.Canary;
       }),

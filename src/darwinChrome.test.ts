@@ -71,8 +71,7 @@ describe('darwin: chrome', () => {
         quality: Quality.Stable,
       },
       {
-        path:
-          '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
+        path: '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
         quality: Quality.Dev,
       },
     ]);
@@ -91,7 +90,7 @@ describe('darwin: chrome', () => {
 
     let calls = 0;
     expect(
-      await s.findWhere(exe => {
+      await s.findWhere((exe) => {
         calls++;
         return exe.quality === Quality.Stable;
       }),
@@ -103,13 +102,12 @@ describe('darwin: chrome', () => {
     expect(calls).to.equal(1);
 
     expect(
-      await s.findWhere(exe => {
+      await s.findWhere((exe) => {
         calls++;
         return exe.quality === Quality.Dev;
       }),
     ).to.deep.equal({
-      path:
-        '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
+      path: '/Users/foo/Applications (Parallels)/{f5861500-b6d1-4929-b85d-d920e2656184} Applications.localized/Google Chrome.app/Contents/MacOS/Google Chrome',
       quality: Quality.Dev,
     });
   });

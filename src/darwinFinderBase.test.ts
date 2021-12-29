@@ -17,7 +17,7 @@ describe('DarwinFinderBase', () => {
 
   let accessStub: SinonStub;
   beforeEach(() => {
-    accessStub = stub(fs, 'access').callsFake(path =>
+    accessStub = stub(fs, 'access').callsFake((path) =>
       validPaths.has(path.toString()) ? Promise.resolve() : Promise.reject('no acccess'),
     );
   });
