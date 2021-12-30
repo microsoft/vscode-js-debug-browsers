@@ -2,14 +2,14 @@
  * Copyright (C) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 
-import { DarwinChromeBrowserFinder } from './darwinChrome';
-import { WindowsChromeBrowserFinder } from './windowsChrome';
-import { LinuxChromeBrowserFinder } from './linuxChrome';
-import { WindowsEdgeBrowserFinder } from './windowsEdge';
-import { DarwinEdgeBrowserFinder } from './darwinEdge';
-import { NoopFinder } from './noop';
-import { promises as fs } from 'fs';
 import execa from 'execa';
+import { promises as fs } from 'fs';
+import { DarwinChromeBrowserFinder } from './darwinChrome';
+import { DarwinEdgeBrowserFinder } from './darwinEdge';
+import { LinuxChromeBrowserFinder } from './linuxChrome';
+import { LinuxEdgeBrowserFinder } from './linuxEdge';
+import { WindowsChromeBrowserFinder } from './windowsChrome';
+import { WindowsEdgeBrowserFinder } from './windowsEdge';
 
 /**
  * Quality (i.e. release channel) of discovered binary.
@@ -86,4 +86,4 @@ export const EdgeBrowserFinder: BrowserFinderCtor =
     ? WindowsEdgeBrowserFinder
     : process.platform === 'darwin'
     ? DarwinEdgeBrowserFinder
-    : NoopFinder;
+    : LinuxEdgeBrowserFinder;

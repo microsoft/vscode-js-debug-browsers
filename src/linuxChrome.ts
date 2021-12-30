@@ -3,7 +3,7 @@
  *--------------------------------------------------------*/
 
 import { posix } from 'path';
-import { preferredChromePath, sort, canAccess, escapeRegexSpecialChars } from './util';
+import { sort, canAccess, escapeRegexSpecialChars } from './util';
 import { execSync, execFileSync } from 'child_process';
 import { homedir } from 'os';
 import { IBrowserFinder, Quality, IExecutable } from './index';
@@ -15,7 +15,35 @@ const newLineRegex = /\r?\n/;
  * Finds the Chrome browser on Windows.
  */
 export class LinuxChromeBrowserFinder implements IBrowserFinder {
-  constructor(private readonly env: NodeJS.ProcessEnv, private readonly fs: typeof fsPromises) {}
+  constructor(
+    protected readonly env: NodeJS.ProcessEnv,
+    protected readonly fs: typeof fsPromises,
+  ) {}
+
+  protected readonly pathEnvironmentVar: string = 'CHROME_PATH';
+
+  protected readonly priorities = [
+    { regex: /chrome-wrapper$/, weight: 54, quality: Quality.Custom },
+    { regex: /google-chrome-dev$/, weight: 53, quality: Quality.Dev },
+    { regex: /google-chrome-canary$/, weight: 52, quality: Quality.Canary },
+    { regex: /google-chrome-unstable$/, weight: 51, quality: Quality.Canary },
+    { regex: /google-chrome-canary$/, weight: 51, quality: Quality.Canary },
+    { regex: /google-chrome-stable$/, weight: 50, quality: Quality.Stable },
+    { regex: /google-chrome$/, weight: 49, quality: Quality.Stable },
+    { regex: /chromium-browser$/, weight: 48, quality: Quality.Custom },
+    { regex: /chromium$/, weight: 47, quality: Quality.Custom },
+  ];
+
+  protected readonly executablesOnPath = [
+    'google-chrome-unstable',
+    'google-chrome-dev',
+    'google-chrome-beta',
+    'google-chrome-canary',
+    'google-chrome-stable',
+    'google-chrome',
+    'chromium-browser',
+    'chromium',
+  ];
 
   public async findWhere(predicate: (exe: IExecutable) => boolean) {
     return (await this.findAll()).find(predicate);
@@ -25,9 +53,10 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
     const installations = new Set<string>();
 
     // 1. Look into CHROME_PATH env variable
-    const customChromePath = await preferredChromePath(this.fs, this.env);
+    const envPath = this.env[this.pathEnvironmentVar];
+    const customChromePath = envPath && (await canAccess(this.fs, envPath));
     if (customChromePath) {
-      installations.add(customChromePath);
+      installations.add(envPath);
     }
 
     // 2. Look into the directories where .desktop are saved on gnome based distro's
@@ -43,16 +72,8 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
     });
 
     // 3. Look for google-chrome & chromium executables by using the which command
-    const executables = [
-      'google-chrome-unstable',
-      'google-chrome-stable',
-      'google-chrome',
-      'chromium-browser',
-      'chromium',
-    ];
-
     await Promise.all(
-      executables.map(async (executable) => {
+      this.executablesOnPath.map(async (executable) => {
         try {
           const chromePath = execFileSync('which', [executable], { stdio: 'pipe' })
             .toString()
@@ -69,33 +90,26 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
 
     if (!installations.size) {
       throw new Error(
-        'The environment variable CHROME_PATH must be set to executable of a build of Chromium version 54.0 or later.',
+        `The environment variable ${envPath} must be set to executable of a build of the browser.`,
       );
     }
 
-    const priorities = [
-      { regex: /chrome-wrapper$/, weight: 52, quality: Quality.Custom },
-      { regex: /google-chrome-unstable$/, weight: 51, quality: Quality.Canary },
-      { regex: /google-chrome-stable$/, weight: 50, quality: Quality.Stable },
-      { regex: /google-chrome$/, weight: 49, quality: Quality.Stable },
-      { regex: /chromium-browser$/, weight: 48, quality: Quality.Custom },
-      { regex: /chromium$/, weight: 47, quality: Quality.Custom },
-    ];
-
-    if (this.env.CHROME_PATH) {
-      priorities.unshift({
-        regex: new RegExp(escapeRegexSpecialChars(this.env.CHROME_PATH)),
-        weight: 101,
-        quality: Quality.Custom,
-      });
-    }
+    const priorities = envPath
+      ? [
+          {
+            regex: new RegExp(escapeRegexSpecialChars(envPath)),
+            weight: 101,
+            quality: Quality.Custom,
+          },
+        ].concat(this.priorities)
+      : this.priorities;
 
     return sort(installations, priorities);
   }
 
   private async findChromeExecutables(folder: string) {
     const argumentsRegex = /(^[^ ]+).*/; // Take everything up to the first space
-    const chromeExecRegex = '^Exec=/.*/(google-chrome|chrome|chromium)-.*';
+    const chromeExecRegex = `^Exec=/.*/(${this.executablesOnPath.join('|')})-.*`;
 
     const installations: string[] = [];
     if (await canAccess(this.fs, folder)) {
