@@ -65,7 +65,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       '/usr/share/applications/',
       '/usr/bin',
     ];
-    desktopInstallationFolders.forEach(folder => {
+    desktopInstallationFolders.forEach((folder) => {
       for (const bin in this.findChromeExecutables(folder)) {
         installations.add(bin);
       }
@@ -73,7 +73,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
 
     // 3. Look for google-chrome & chromium executables by using the which command
     await Promise.all(
-      this.executablesOnPath.map(async executable => {
+      this.executablesOnPath.map(async (executable) => {
         try {
           const chromePath = execFileSync('which', [executable], { stdio: 'pipe' })
             .toString()
@@ -123,10 +123,10 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       const execPaths = execResult
         .toString()
         .split(newLineRegex)
-        .map(execPath => execPath.replace(argumentsRegex, '$1'));
+        .map((execPath) => execPath.replace(argumentsRegex, '$1'));
 
       await Promise.all(
-        execPaths.map(async execPath => {
+        execPaths.map(async (execPath) => {
           if (await canAccess(this.fs, execPath)) {
             installations.push(execPath);
           }
