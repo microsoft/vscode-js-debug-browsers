@@ -26,6 +26,8 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
    */
   protected wellKnownPaths: ReadonlyArray<IExecutable> = [];
 
+  private foundAll: Promise<IExecutable[]> | undefined;
+
   constructor(
     protected readonly env: NodeJS.ProcessEnv,
     private readonly fs: typeof fsPromises,
@@ -48,7 +50,15 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
   /**
    * @inheritdoc
    */
-  public abstract findAll(): Promise<IExecutable[]>;
+  public findAll(): Promise<IExecutable[]> {
+    this.foundAll ??= this.findAllInner();
+    return this.foundAll;
+  }
+
+  /**
+   * findAll implementation. Cached.
+   */
+  protected abstract findAllInner(): Promise<IExecutable[]>;
 
   /**
    * Returns the environment-configured custom path, if any.
@@ -64,7 +74,9 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
     suffixes: ReadonlyArray<string>,
   ) {
     const { stdout } = await this.execa.command(
-      `${this.lsRegisterCommand} | awk '$0 ~ /${pattern}${pathSuffixRe.source}?$/ { $1=""; print $0 }'`,
+      `${this.lsRegisterCommand} | awk 'tolower($0) ~ /${pattern.toLowerCase()}${
+        pathSuffixRe.source
+      }?$/ { $1=""; print $0 }'`,
       { shell: true, stdio: 'pipe' },
     );
 

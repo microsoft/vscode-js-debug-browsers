@@ -32,10 +32,7 @@ export class DarwinEdgeBrowserFinder extends DarwinFinderBase {
     },
   ];
 
-  /**
-   * @override
-   */
-  public async findAll() {
+  protected override async findAllInner() {
     const suffixes = [
       '/Contents/MacOS/Microsoft Edge Canary',
       '/Contents/MacOS/Microsoft Edge Beta',
