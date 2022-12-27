@@ -32,17 +32,19 @@ export class DarwinChromeBrowserFinder extends DarwinFinderBase {
     },
   ];
 
-  /**
-   * @override
-   */
-  public async findAll() {
-    const suffixes = ['/Contents/MacOS/Google Chrome Canary', '/Contents/MacOS/Google Chrome'];
+  protected override async findAllInner() {
+    const suffixes = [
+      '/Contents/MacOS/Google Chrome Canary',
+      '/Contents/MacOS/Google Chrome Beta',
+      '/Contents/MacOS/Google Chrome Dev',
+      '/Contents/MacOS/Google Chrome',
+    ];
     const defaultPaths = [
       '/Applications/Google Chrome.app',
       '/Applications/Google Chrome Canary.app',
     ];
     const installations = await this.findLaunchRegisteredApps(
-      'google chrome\\( canary\\)\\?.app',
+      'google chrome[A-Za-z() ]*.app',
       defaultPaths,
       suffixes,
     );
@@ -59,6 +61,16 @@ export class DarwinChromeBrowserFinder extends DarwinFinderBase {
           name: 'Chrome Canary.app',
           weight: 1,
           quality: Quality.Canary,
+        },
+        {
+          name: 'Chrome Beta.app',
+          weight: 2,
+          quality: Quality.Beta,
+        },
+        {
+          name: 'Chrome Dev.app',
+          weight: 3,
+          quality: Quality.Dev,
         },
       ]),
     );
