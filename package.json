@@ -1,10 +1,10 @@
 {
   "name": "@vscode/js-debug-browsers",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Browser launch and discovery logic used in VS Code's JavaScript Debugger",
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "npm run compile",
+    "prepack": "npm run compile",
     "compile": "rimraf dist && tsc",
     "watch": "rimraf dist && tsc --watch",
     "test": "npm run test:unit && npm run test:lint && npm run test:fmt",
