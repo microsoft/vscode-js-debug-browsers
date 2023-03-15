@@ -25,7 +25,7 @@ extends:
   parameters:
     npmPackages:
       - name: js-debug-browsers
-
+        ghCreateTag: false
         buildSteps:
           - script: npm ci
             displayName: Install dependencies
