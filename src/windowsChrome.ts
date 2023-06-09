@@ -11,7 +11,10 @@ import { promises as fsPromises } from 'fs';
  * Finds the Chrome browser on Windows.
  */
 export class WindowsChromeBrowserFinder implements IBrowserFinder {
-  constructor(private readonly env: NodeJS.ProcessEnv, private readonly fs: typeof fsPromises) {}
+  constructor(
+    private readonly env: NodeJS.ProcessEnv = process.env,
+    private readonly fs: typeof fsPromises = fsPromises,
+  ) {}
 
   public async findWhere(predicate: (exe: IExecutable) => boolean) {
     return (await this.findAll()).find(predicate);

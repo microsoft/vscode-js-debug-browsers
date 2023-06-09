@@ -66,9 +66,9 @@ export interface IBrowserFinder {
 }
 
 export type BrowserFinderCtor = new (
-  env: NodeJS.ProcessEnv,
-  _fs: typeof fs,
-  _execa: typeof execa,
+  env?: NodeJS.ProcessEnv,
+  _fs?: typeof fs,
+  _execa?: typeof execa,
 ) => IBrowserFinder;
 
 /**
