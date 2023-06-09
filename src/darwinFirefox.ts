@@ -7,7 +7,7 @@ import { Quality } from './index';
 import { DarwinFinderBase } from './darwinFinderBase';
 
 /**
- * Finds the Edege browser on OS X.
+ * Finds the Firefox browser on OS X.
  */
 export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
   /**
