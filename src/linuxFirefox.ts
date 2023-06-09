@@ -5,7 +5,7 @@
 import { Quality } from '.';
 import { LinuxChromeBrowserFinder } from './linuxChrome';
 
-export class LinuxEdgeBrowserFinder extends LinuxChromeBrowserFinder {
+export class LinuxFirefoxBrowserFinder extends LinuxChromeBrowserFinder {
   protected override pathEnvironmentVar = 'FIREFOX_PATH';
 
   protected override executablesOnPath = [

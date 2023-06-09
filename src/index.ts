@@ -6,10 +6,13 @@ import execa from 'execa';
 import { promises as fs } from 'fs';
 import { DarwinChromeBrowserFinder } from './darwinChrome';
 import { DarwinEdgeBrowserFinder } from './darwinEdge';
+import { DarwinFirefoxBrowserFinder } from './darwinFirefox';
 import { LinuxChromeBrowserFinder } from './linuxChrome';
 import { LinuxEdgeBrowserFinder } from './linuxEdge';
+import { LinuxFirefoxBrowserFinder } from './linuxFirefox';
 import { WindowsChromeBrowserFinder } from './windowsChrome';
 import { WindowsEdgeBrowserFinder } from './windowsEdge';
+import { WindowsFirefoxBrowserFinder } from './windowsFirefox';
 
 /**
  * Quality (i.e. release channel) of discovered binary.
@@ -89,3 +92,13 @@ export const EdgeBrowserFinder: BrowserFinderCtor =
     : process.platform === 'darwin'
     ? DarwinEdgeBrowserFinder
     : LinuxEdgeBrowserFinder;
+
+/**
+ * Firefox finder class for the current platform.
+ */
+export const FirefoxBrowserFinder: BrowserFinderCtor =
+  process.platform === 'win32'
+    ? WindowsFirefoxBrowserFinder
+    : process.platform === 'darwin'
+      ? DarwinFirefoxBrowserFinder
+      : LinuxFirefoxBrowserFinder;
