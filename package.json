@@ -1,6 +1,6 @@
 {
   "name": "@vscode/js-debug-browsers",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Browser launch and discovery logic used in VS Code's JavaScript Debugger",
   "main": "dist/index.js",
   "scripts": {
