@@ -16,8 +16,8 @@ const newLineRegex = /\r?\n/;
  */
 export class LinuxChromeBrowserFinder implements IBrowserFinder {
   constructor(
-    protected readonly env: NodeJS.ProcessEnv,
-    protected readonly fs: typeof fsPromises,
+    protected readonly env: NodeJS.ProcessEnv = process.env,
+    protected readonly fs: typeof fsPromises = fsPromises,
   ) {}
 
   protected readonly pathEnvironmentVar: string = 'CHROME_PATH';

@@ -29,9 +29,9 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
   private foundAll: Promise<IExecutable[]> | undefined;
 
   constructor(
-    protected readonly env: NodeJS.ProcessEnv,
-    private readonly fs: typeof fsPromises,
-    private readonly execa: typeof _execa,
+    protected readonly env: NodeJS.ProcessEnv = process.env,
+    private readonly fs: typeof fsPromises = fsPromises,
+    private readonly execa: typeof _execa = execa,
   ) {}
 
   /**
