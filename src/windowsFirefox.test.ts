@@ -54,7 +54,7 @@ describe('windows: firefox', () => {
       },
       {
         path: '%PROGRAMFILES%\\Firefox Nightly\\firefox.exe',
-        quality: Quality.Nightly,
+        quality: Quality.Canary,
       },
     ]);
   });

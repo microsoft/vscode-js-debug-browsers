@@ -22,7 +22,6 @@ export const enum Quality {
   Stable = 'stable',
   Beta = 'beta',
   Dev = 'dev',
-  Nightly = 'nightly',
   Custom = 'custom', // environment-configured quality
 }
 
@@ -32,7 +31,6 @@ const qualities: { [K in Quality]: null } = {
   [Quality.Stable]: null,
   [Quality.Beta]: null,
   [Quality.Dev]: null,
-  [Quality.Nightly]: null,
   [Quality.Custom]: null,
 };
 

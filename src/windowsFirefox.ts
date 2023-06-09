@@ -26,7 +26,7 @@ export class WindowsFirefoxBrowserFinder implements IBrowserFinder {
             },
             {
                 name: `${sep}Firefox Nightly${sep}firefox.exe`,
-                type: Quality.Nightly,
+              type: Quality.Canary,
             },
             {
                 name: `${sep}Mozilla Firefox${sep}firefox.exe`,

@@ -24,7 +24,7 @@ export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
     },
     {
       path: '/Applications/Firefox Nightly.app/Contents/MacOS/firefox',
-      quality: Quality.Nightly,
+      quality: Quality.Canary,
     },
   ];
 
@@ -56,7 +56,7 @@ export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
         {
           name: 'Firefox Nightly.app',
           weight: 2,
-          quality: Quality.Nightly,
+          quality: Quality.Canary,
         }
       ]),
     );

@@ -18,8 +18,8 @@ export class LinuxFirefoxBrowserFinder extends LinuxChromeBrowserFinder {
   ];
 
   protected override priorities = [
-    { regex: /firefox\-trunk'$/, weight: 51, quality: Quality.Nightly },
-    { regex: /firefox\-nightly'$/, weight: 51, quality: Quality.Nightly },
+    { regex: /firefox\-trunk'$/, weight: 51, quality: Quality.Canary },
+    { regex: /firefox\-nightly'$/, weight: 51, quality: Quality.Canary },
     { regex: /firefox\-aurora$/, weight: 50, quality: Quality.Dev },
     { regex: /firefox\-dev$/, weight: 50, quality: Quality.Dev },
     { regex: /firefox\-developer$/, weight: 50, quality: Quality.Dev },
