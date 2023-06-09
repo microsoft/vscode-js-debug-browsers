@@ -29,11 +29,7 @@ export class WindowsFirefoxBrowserFinder implements IBrowserFinder {
                 type: Quality.Nightly,
             },
             {
-                name: `${sep}Mozilla${sep}Firefox${sep}firefox.exe`,
-                type: Quality.Beta,
-            },
-            {
-                name: `${sep}Mozilla${sep}Firefox${sep}firefox.exe`,
+                name: `${sep}Mozilla Firefox${sep}firefox.exe`,
                 type: Quality.Stable,
             },
         ];
