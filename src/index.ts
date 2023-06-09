@@ -98,5 +98,5 @@ export const FirefoxBrowserFinder: BrowserFinderCtor =
   process.platform === 'win32'
     ? WindowsFirefoxBrowserFinder
     : process.platform === 'darwin'
-      ? DarwinFirefoxBrowserFinder
-      : LinuxFirefoxBrowserFinder;
+    ? DarwinFirefoxBrowserFinder
+    : LinuxFirefoxBrowserFinder;

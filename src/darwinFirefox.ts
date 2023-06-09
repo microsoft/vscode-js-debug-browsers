@@ -29,9 +29,7 @@ export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
   ];
 
   protected override async findAllInner() {
-    const suffixes = [
-      '/Contents/MacOS/firefox',
-    ];
+    const suffixes = ['/Contents/MacOS/firefox'];
 
     const defaultPaths = ['/Applications/Firefox.app'];
     const installations = await this.findLaunchRegisteredApps(
@@ -57,7 +55,7 @@ export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
           name: 'Firefox Nightly.app',
           weight: 2,
           quality: Quality.Canary,
-        }
+        },
       ]),
     );
   }
