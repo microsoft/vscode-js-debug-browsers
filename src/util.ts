@@ -51,6 +51,18 @@ export async function preferredChromePath(
 }
 
 /**
+ * Gets the configured Firefox path, if any.
+ */
+export async function preferredFirefoxPath(
+  fs: typeof fsPromises,
+  env: NodeJS.ProcessEnv,
+): Promise<string | undefined> {
+  if (await canAccess(fs, env.FIREFOX_PATH)) {
+    return env.FIREFOX_PATH;
+  }
+}
+
+/**
  * Gets the configured Edge path, if any.
  */
 export async function preferredEdgePath(
