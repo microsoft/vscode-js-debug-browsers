@@ -47,14 +47,14 @@ export class DarwinFirefoxBrowserFinder extends DarwinFinderBase {
           quality: Quality.Stable,
         },
         {
-          name: 'Firefox Developer Edition.app',
+          name: 'Firefox Nightly.app',
           weight: 1,
-          quality: Quality.Dev,
+          quality: Quality.Canary,
         },
         {
-          name: 'Firefox Nightly.app',
+          name: 'Firefox Developer Edition.app',
           weight: 2,
-          quality: Quality.Canary,
+          quality: Quality.Dev,
         },
       ]),
     );

@@ -62,12 +62,12 @@ describe('darwin: firefox', () => {
         quality: Quality.Custom,
       },
       {
-        path: '/Applications/Firefox Nightly.app/Contents/MacOS/firefox',
-        quality: Quality.Canary,
-      },
-      {
         path: '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox',
         quality: Quality.Dev,
+      },
+      {
+        path: '/Applications/Firefox Nightly.app/Contents/MacOS/firefox',
+        quality: Quality.Canary,
       },
       {
         path: '/Applications/Firefox.app/Contents/MacOS/firefox',
