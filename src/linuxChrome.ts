@@ -29,7 +29,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
     { regex: /google-chrome-unstable$/, weight: 51, quality: Quality.Canary },
     { regex: /google-chrome-canary$/, weight: 51, quality: Quality.Canary },
     { regex: /google-chrome-stable$/, weight: 50, quality: Quality.Stable },
-    { regex: /google-chrome$/, weight: 49, quality: Quality.Stable },
+    { regex: /(google-)?chrome$/, weight: 49, quality: Quality.Stable },
     { regex: /chromium-browser$/, weight: 48, quality: Quality.Custom },
     { regex: /chromium$/, weight: 47, quality: Quality.Custom },
   ];
@@ -64,6 +64,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       posix.join(homedir(), '.local/share/applications/'),
       '/usr/share/applications/',
       '/usr/bin',
+      '/opt/google', // Chromebook location, vscode #198192
     ];
     desktopInstallationFolders.forEach((folder) => {
       for (const bin in this.findChromeExecutables(folder)) {
