@@ -116,7 +116,7 @@ export class LinuxChromeBrowserFinder implements IBrowserFinder {
       // See https://github.com/GoogleChrome/chrome-launcher/issues/46 for more context.
       let execResult: Buffer;
       try {
-        execResult = execSync(`grep -ER "${chromeExecRegex}" ${folder} | awk -F '=' '{print $2}'`);
+        execResult = execSync(`grep -ERI "${chromeExecRegex}" ${folder} | awk -F '=' '{print $2}'`);
       } catch (e) {
         execResult = execSync(`grep -Er "${chromeExecRegex}" ${folder} | awk -F '=' '{print $2}'`);
       }
