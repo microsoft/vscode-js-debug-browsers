@@ -31,7 +31,7 @@ export abstract class DarwinFinderBase implements IBrowserFinder {
   constructor(
     protected readonly env: NodeJS.ProcessEnv = process.env,
     private readonly fs: typeof fsPromises = fsPromises,
-    private readonly execa: typeof _execa = execa,
+    private readonly execa: typeof _execa = _execa,
   ) {}
 
   /**
